@@ -1,5 +1,7 @@
 #+AUTHOR: Travis Nesland
 #+DATE: <2015-01-05 Mon>
+#+PROPERTY: header-args :exports both :tangle HW01.rb
+#+ORG
 
 * Assignment Monday, January 5th, 2015
 
@@ -17,7 +19,9 @@
 **** SUCC
      Return the successor to this integer (this integer + 1)
 
-    #+BEGIN_SRC ruby :results output :exports both
+    #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+      # SUCC
+      # Return the successor to this integer (this integer + 1)
       my_int = 4
       puts my_int.succ   
     #+END_SRC
@@ -28,19 +32,28 @@
 **** TIMES
      Perform a block a number of times equal to this integer
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # TIMES
+       # Perform a block a number of times equal to this integer
        my_int = 4
        puts my_int.times { puts "foo" }    
      #+END_SRC
 
      #+RESULTS:
+     : foo
+     : foo
+     : foo
+     : foo
      : 4
 
 **** GCD
      Returns the greatest common divisor of this integer and another,
      provided integer.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # GCD
+       # Returns the greatest common divisor of this integer and another,
+       # provided integer.
        my_int = 4
        puts my_int.gcd(6)
      #+END_SRC
@@ -51,19 +64,25 @@
 **** RATIONALIZE
      Returns the rationalized version of the integer.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # RATIONALIZE
+       # Returns the rationalized version of the integer.
        my_int = 4
        puts my_int.rationalize
      #+END_SRC
 
      #+RESULTS:
-     | 4/1 |
+     : 4/1
 
 **** CHR
      Returns a string containing the character represented by the int‘s
      value according to encoding.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # CHR
+       # Returns a string containing the character represented by the int‘s
+       # value according to encoding.
+       # NOTE: My example is a non-printing character!
        my_int = 4
        puts my_int.chr
      #+END_SRC
@@ -77,17 +96,21 @@
 **** HASH
      Returns a hash code for this float.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # HASH
+       # Returns a hash code for this float.
        my_float = 3.14
        puts my_float.hash
      #+END_SRC
 
      #+RESULTS:
-     : 1064916570900917311
+     : -4067539215678238760
 **** NEXT_FLOAT
      Returns the next representable floating-point number.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # NEXT_FLOAT
+       # Returns the next representable floating-point number.
        my_float = 3.14
        puts my_float.next_float
      #+END_SRC
@@ -97,19 +120,25 @@
 **** TO_R
      Returns the value as rational.
      
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # TO_R
+       # Returns the value as rational.
        my_float = 3.14
        puts my_float.to_r
      #+END_SRC
 
      #+RESULTS:
-     | 7070651414971679/2251799813685248 |
+     : 7070651414971679/2251799813685248
 **** ROUND
      Rounds flt to a given precision in decimal digits (default 0
      digits). Precision may be negative. Returns a floating point
      number when ndigits is more than zero.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # ROUND
+       # Rounds flt to a given precision in decimal digits (default 0
+       # digits). Precision may be negative. Returns a floating point number
+       # when ndigits is more than zero.
        my_float = 3.14
        puts my_float.round(1)
      #+END_SRC
@@ -119,7 +148,9 @@
 **** TRUNCATE
      Returns flt truncated to an Integer.
      
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # TRUNCATE
+       # Returns flt truncated to an Integer.
        my_float = 3.14
        puts my_float.truncate
      #+END_SRC
@@ -135,25 +166,32 @@
      of length integer with str centered and padded with padstr;
      otherwise, returns str.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # CENTER
+       # If integer is greater than the length of str, returns a new String
+       # of length integer with str centered and padded with padstr;
+       # otherwise, returns str.
        my_string = "foo"
        puts my_string.center 20
      #+END_SRC
 
      #+RESULTS:
-     :        foobar       
+     :         foo         
 
 **** EACH_CHAR
      Passes each character in str to the given block, or returns an
      enumerator if no block is given.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # EACH_CHAR
+       # Passes each character in str to the given block, or returns an
+       # enumerator if no block is given.
        my_string = "foo"
        my_string.each_char { |c| print c, ' ' }
      #+END_SRC
 
      #+RESULTS:
-     : f o o b a r 
+     : f o o 
 
 **** CHOP
      Returns a new String with the last character removed. If the
@@ -162,7 +200,13 @@
      a safer alternative, as it leaves the string unchanged if it
      doesn’t end in a record separator.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # CHOP
+       # Returns a new String with the last character removed. If the string
+       # ends with \r\n, both characters are removed. Applying chop to an
+       # empty string returns an empty string. String#chomp is often a safer
+       # alternative, as it leaves the string unchanged if it doesn’t end in
+       # a record separator.
        my_string = "foobar"
        puts my_string.chop
      #+END_SRC
@@ -176,20 +220,29 @@
      which should be two characters long, each character drawn from
      [a-zA-Z0-9./].
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # CRYPT
+       # Applies a one-way cryptographic hash to str by invoking the standard
+       # library function crypt. The argument is the salt string, which
+       # should be two characters long, each character drawn from
+       # [a-zA-Z0-9./].
        my_string = "foo"
        puts my_string.crypt "A3"
      #+END_SRC
 
      #+RESULTS:
-     : A3xQsodHJLGm2
+     : A3XBtN3LKIjB6
 
 **** DELETES
      Returns a copy of str with all characters in the intersection of
      its arguments deleted. Uses the same rules for building the set of
      characters as String#count.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # DELETES
+       # Returns a copy of str with all characters in the intersection of its
+       # arguments deleted. Uses the same rules for building the set of
+       # characters as String#count.
        my_string = "foobar"
        puts my_string.delete "bar"
      #+END_SRC
@@ -202,17 +255,21 @@
 **** INSPECT
      Returns string representation.
      
-     #+BEGIN_SRC ruby :results output :exports both
-     puts true.inspect
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # INSPECT
+       # Returns string representation.
+       puts true.inspect
      #+END_SRC
 
      #+RESULTS:
-     : String
+     : true
 
 **** AND
      Returns false if obj is nil or false, true otherwise.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # AND
+       # Returns false if obj is nil or false, true otherwise.
        puts true & false
        puts true & true
      #+END_SRC
@@ -224,7 +281,9 @@
 **** OR
      Returns false if either obj is true.
      
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # OR
+       # Returns false if either obj is true.
        puts true | true
        puts true | false
        puts false | false
@@ -239,7 +298,10 @@
      Returns true if and only if only one term is true (this gets
      tricky with chained operations!).
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # EXCLUSIVE_OR
+       # Returns true if and only if only one term is true (this gets tricky
+       # with chained operations!).
        puts true ^ false
        puts true ^ true
        # because this is evaluated left to right ( true ^ true ) is false, so
@@ -255,7 +317,9 @@
 **** TO_S
      Returns the string representation of value.
 
-     #+BEGIN_SRC ruby :results output :exports both
+     #+BEGIN_SRC ruby :results output :exports both :tangle HW01.rb
+       # TO_S
+       # Returns the string representation of value.
        puts true.to_s
        puts false.to_s
      #+END_SRC
