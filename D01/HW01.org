@@ -1,6 +1,5 @@
 #+AUTHOR: Travis Nesland
 #+DATE: <2015-01-05 Mon>
-#+BABEL:  :cache yes :results output
 
 *Homework will be posted in HipChat.*
 
@@ -13,7 +12,7 @@
 *** SUCC
     Return the successor to this integer (this integer + 1)
 
-   #+BEGIN_SRC ruby :results output
+   #+BEGIN_SRC ruby :results output :exports both
      my_int = 4
      puts my_int.succ   
    #+END_SRC
@@ -24,7 +23,7 @@
 *** TIMES
     Perform a block a number of times equal to this integer
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_int = 4
       puts my_int.times { puts "foo" }    
     #+END_SRC
@@ -36,7 +35,7 @@
     Returns the greatest common divisor of this integer and another,
     provided integer.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_int = 4
       puts my_int.gcd(6)
     #+END_SRC
@@ -47,7 +46,7 @@
 *** RATIONALIZE
     Returns the rationalized version of the integer.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_int = 4
       puts my_int.rationalize
     #+END_SRC
@@ -59,7 +58,7 @@
     Returns a string containing the character represented by the int‘s
     value according to encoding.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_int = 4
       puts my_int.chr
     #+END_SRC
@@ -73,7 +72,7 @@
 *** HASH
     Returns a hash code for this float.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_float = 3.14
       puts my_float.hash
     #+END_SRC
@@ -83,7 +82,7 @@
 *** NEXT_FLOAT
     Returns the next representable floating-point number.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_float = 3.14
       puts my_float.next_float
     #+END_SRC
@@ -93,7 +92,7 @@
 *** TO_R
     Returns the value as rational.
     
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_float = 3.14
       puts my_float.to_r
     #+END_SRC
@@ -105,7 +104,7 @@
     digits). Precision may be negative. Returns a floating point
     number when ndigits is more than zero.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_float = 3.14
       puts my_float.round(1)
     #+END_SRC
@@ -115,7 +114,7 @@
 *** TRUNCATE
     Returns flt truncated to an Integer.
     
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_float = 3.14
       puts my_float.truncate
     #+END_SRC
@@ -131,7 +130,7 @@
     of length integer with str centered and padded with padstr;
     otherwise, returns str.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_string = "foo"
       puts my_string.center 20
     #+END_SRC
@@ -143,7 +142,7 @@
     Passes each character in str to the given block, or returns an
     enumerator if no block is given.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_string = "foo"
       my_string.each_char { |c| print c, ' ' }
     #+END_SRC
@@ -158,7 +157,7 @@
     a safer alternative, as it leaves the string unchanged if it
     doesn’t end in a record separator.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_string = "foobar"
       puts my_string.chop
     #+END_SRC
@@ -172,7 +171,7 @@
     which should be two characters long, each character drawn from
     [a-zA-Z0-9./].
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_string = "foo"
       puts my_string.crypt "A3"
     #+END_SRC
@@ -185,7 +184,7 @@
     its arguments deleted. Uses the same rules for building the set of
     characters as String#count.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       my_string = "foobar"
       puts my_string.delete "bar"
     #+END_SRC
@@ -198,7 +197,7 @@
 *** INSPECT
     Returns string representation.
     
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
     puts true.inspect
     #+END_SRC
 
@@ -208,7 +207,7 @@
 *** AND
     Returns false if obj is nil or false, true otherwise.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       puts true & false
       puts true & true
     #+END_SRC
@@ -220,7 +219,7 @@
 *** OR
     Returns false if either obj is true.
     
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       puts true | true
       puts true | false
       puts false | false
@@ -235,7 +234,7 @@
     Returns true if and only if only one term is true (this gets
     tricky with chained operations!).
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       puts true ^ false
       puts true ^ true
       # because this is evaluated left to right ( true ^ true ) is false, so
@@ -251,7 +250,7 @@
 *** TO_S
     Returns the string representation of value.
 
-    #+BEGIN_SRC ruby :results output
+    #+BEGIN_SRC ruby :results output :exports both
       puts true.to_s
       puts false.to_s
     #+END_SRC
@@ -259,4 +258,3 @@
     #+RESULTS:
     : true
     : false
-
