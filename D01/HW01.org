@@ -1,14 +1,262 @@
 #+AUTHOR: Travis Nesland
 #+DATE: <2015-01-05 Mon>
+#+BABEL:  :cache yes :results output
 
 *Homework will be posted in HipChat.*
 
-* TODO Follow this git tutorial
+* DONE Follow this git tutorial
   [[try.github.io][GitHub Tutorial]]
 
-* TODO Explore 5 methods for each of the following variable types:
-  - Integer
-  - Float
-  - String
-  - Char
-  - Boolean
+* DONE Explore 5 methods for each of the following variable types:
+** Integer
+
+*** SUCC
+    Return the successor to this integer (this integer + 1)
+
+   #+BEGIN_SRC ruby :results output
+     my_int = 4
+     puts my_int.succ   
+   #+END_SRC
+
+   #+RESULTS:
+   : 5
+   
+*** TIMES
+    Perform a block a number of times equal to this integer
+
+    #+BEGIN_SRC ruby :results output
+      my_int = 4
+      puts my_int.times { puts "foo" }    
+    #+END_SRC
+
+    #+RESULTS:
+    : 4
+
+*** GCD
+    Returns the greatest common divisor of this integer and another,
+    provided integer.
+
+    #+BEGIN_SRC ruby :results output
+      my_int = 4
+      puts my_int.gcd(6)
+    #+END_SRC
+
+    #+RESULTS:
+    : 2
+
+*** RATIONALIZE
+    Returns the rationalized version of the integer.
+
+    #+BEGIN_SRC ruby :results output
+      my_int = 4
+      puts my_int.rationalize
+    #+END_SRC
+
+    #+RESULTS:
+    | 4/1 |
+
+*** CHR
+    Returns a string containing the character represented by the int‘s
+    value according to encoding.
+
+    #+BEGIN_SRC ruby :results output
+      my_int = 4
+      puts my_int.chr
+    #+END_SRC
+
+    #+RESULTS:
+    : 
+
+
+** Float
+
+*** HASH
+    Returns a hash code for this float.
+
+    #+BEGIN_SRC ruby :results output
+      my_float = 3.14
+      puts my_float.hash
+    #+END_SRC
+
+    #+RESULTS:
+    : 1064916570900917311
+*** NEXT_FLOAT
+    Returns the next representable floating-point number.
+
+    #+BEGIN_SRC ruby :results output
+      my_float = 3.14
+      puts my_float.next_float
+    #+END_SRC
+
+    #+RESULTS:
+    : 3.1400000000000006
+*** TO_R
+    Returns the value as rational.
+    
+    #+BEGIN_SRC ruby :results output
+      my_float = 3.14
+      puts my_float.to_r
+    #+END_SRC
+
+    #+RESULTS:
+    | 7070651414971679/2251799813685248 |
+*** ROUND
+    Rounds flt to a given precision in decimal digits (default 0
+    digits). Precision may be negative. Returns a floating point
+    number when ndigits is more than zero.
+
+    #+BEGIN_SRC ruby :results output
+      my_float = 3.14
+      puts my_float.round(1)
+    #+END_SRC
+
+    #+RESULTS:
+    : 3.1
+*** TRUNCATE
+    Returns flt truncated to an Integer.
+    
+    #+BEGIN_SRC ruby :results output
+      my_float = 3.14
+      puts my_float.truncate
+    #+END_SRC
+
+    #+RESULTS:
+    : 3
+
+    
+** String
+
+*** CENTER
+    If integer is greater than the length of str, returns a new String
+    of length integer with str centered and padded with padstr;
+    otherwise, returns str.
+
+    #+BEGIN_SRC ruby :results output
+      my_string = "foo"
+      puts my_string.center 20
+    #+END_SRC
+
+    #+RESULTS:
+    :        foobar       
+
+*** EACH_CHAR
+    Passes each character in str to the given block, or returns an
+    enumerator if no block is given.
+
+    #+BEGIN_SRC ruby :results output
+      my_string = "foo"
+      my_string.each_char { |c| print c, ' ' }
+    #+END_SRC
+
+    #+RESULTS:
+    : f o o b a r 
+
+*** CHOP
+    Returns a new String with the last character removed. If the
+    string ends with \r\n, both characters are removed. Applying chop
+    to an empty string returns an empty string. String#chomp is often
+    a safer alternative, as it leaves the string unchanged if it
+    doesn’t end in a record separator.
+
+    #+BEGIN_SRC ruby :results output
+      my_string = "foobar"
+      puts my_string.chop
+    #+END_SRC
+
+    #+RESULTS:
+    : fooba
+
+*** CRYPT
+    Applies a one-way cryptographic hash to str by invoking the
+    standard library function crypt. The argument is the salt string,
+    which should be two characters long, each character drawn from
+    [a-zA-Z0-9./].
+
+    #+BEGIN_SRC ruby :results output
+      my_string = "foo"
+      puts my_string.crypt "A3"
+    #+END_SRC
+
+    #+RESULTS:
+    : A3xQsodHJLGm2
+
+*** DELETES
+    Returns a copy of str with all characters in the intersection of
+    its arguments deleted. Uses the same rules for building the set of
+    characters as String#count.
+
+    #+BEGIN_SRC ruby :results output
+      my_string = "foobar"
+      puts my_string.delete "bar"
+    #+END_SRC
+
+    #+RESULTS:
+    : foo
+
+    
+** Boolean
+*** INSPECT
+    Returns string representation.
+    
+    #+BEGIN_SRC ruby :results output
+    puts true.inspect
+    #+END_SRC
+
+    #+RESULTS:
+    : String
+
+*** AND
+    Returns false if obj is nil or false, true otherwise.
+
+    #+BEGIN_SRC ruby :results output
+      puts true & false
+      puts true & true
+    #+END_SRC
+
+    #+RESULTS:
+    : false
+    : true
+
+*** OR
+    Returns false if either obj is true.
+    
+    #+BEGIN_SRC ruby :results output
+      puts true | true
+      puts true | false
+      puts false | false
+    #+END_SRC
+
+    #+RESULTS:
+    : true
+    : true
+    : false
+
+*** Exclusive Or (^)
+    Returns true if and only if only one term is true (this gets
+    tricky with chained operations!).
+
+    #+BEGIN_SRC ruby :results output
+      puts true ^ false
+      puts true ^ true
+      # because this is evaluated left to right ( true ^ true ) is false, so
+      # then false ^ true is true
+      puts true ^ true ^ true
+    #+END_SRC
+
+    #+RESULTS:
+    : true
+    : false
+    : true
+
+*** TO_S
+    Returns the string representation of value.
+
+    #+BEGIN_SRC ruby :results output
+      puts true.to_s
+      puts false.to_s
+    #+END_SRC
+
+    #+RESULTS:
+    : true
+    : false
+
