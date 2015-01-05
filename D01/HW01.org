@@ -1,7 +1,6 @@
 #+AUTHOR: Travis Nesland
 #+DATE: <2015-01-05 Mon>
 #+PROPERTY: header-args :exports both :tangle HW01.rb
-#+ORG
 
 * Assignment Monday, January 5th, 2015
 
