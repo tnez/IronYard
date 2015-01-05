@@ -1,0 +1,14 @@
+#+AUTHOR: Travis Nesland
+#+DATE: <2015-01-05 Mon>
+
+*Homework will be posted in HipChat.*
+
+* TODO Follow this git tutorial
+  [[try.github.io][GitHub Tutorial]]
+
+* TODO Explore 5 methods for each of the following variable types:
+  - Integer
+  - Float
+  - String
+  - Char
+  - Boolean
