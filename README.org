@@ -1,0 +1,5 @@
+* DAY 02
+** Quiz
+
+   Quiz a user on trivia relating to numbers pulled from the [[http://numbersapi.com/][Numbers
+   API]].
