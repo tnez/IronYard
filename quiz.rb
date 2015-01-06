@@ -13,6 +13,7 @@ MAX_ANSWER_CHAR = 'D'
 
 # LOAD REQUIRED CODE
 # ------------------
+require './api'     # require my stored API key
 require 'unirest' # require unirest to query API
 
 
@@ -23,10 +24,9 @@ require 'unirest' # require unirest to query API
 #
 # Return a hash containing :number and :fact
 def get_random_fact_from_numbers_api( n )
-  api_key = "CiWSEUGHC4msh82N8yx1ygcOsvwgp1mYAFGjsnzF2ynTDDlmgJ"
   url = "https://numbersapi.p.mashape.com/#{n}" +
     "/trivia?fragment=true&json=true&notfound=floor"
-  response = Unirest.get( url, headers: { "X-Mashape-Key" => api_key } )
+  response = Unirest.get( url, headers: { "X-Mashape-Key" => $API_KEY } )
   # return the random fact
   return response.body["text"]
 end
