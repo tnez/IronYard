@@ -1,5 +1,7 @@
 * DAY 02
 ** Quiz
-
    Quiz a user on trivia relating to numbers pulled from the [[http://numbersapi.com/][Numbers
    API]].
+** BMI_CALC
+   Calculates BMI based on user input according to the formula found
+   [[http://en.wikipedia.org/wiki/Body_mass_index][here]].
