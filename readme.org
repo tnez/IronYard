@@ -2,9 +2,11 @@
 
 This is my root directory for my time at IronYard.
 
+
 ** D01
 
    We discussed some stuff
+
 
 ** DAY 02
 
@@ -42,6 +44,21 @@ This is my root directory for my time at IronYard.
     Bonus: create a dealer for the blackjack game. He doesn't have to
     split.
 
+    | Components | Desc                     |
+    |------------+--------------------------|
+    | deck       | - standard deck of cards |
+    |            | - next card              |
+    |------------+--------------------------|
+    | player     | - bankroll               |
+    |            | - bet                    |
+    |            | - cards                  |
+    |            | - hit / stay             |
+    |            | - split                  |
+    |------------+--------------------------|
+    | dealer     | - is_busted?             |
+    |------------+--------------------------|
+    |            |                          |
+
 *** TODO Assignment 3:
 
     Finish tic tac toe. Check for wins. Tell the user to move again if
@@ -51,3 +68,27 @@ This is my root directory for my time at IronYard.
 
     Do all of the above - Will buy someone a beer on Friday if they do
     all of the above.
+
+
+** TODO Day 4 - Jan 8th 2015
+
+   Horse racing game. (More complicated because they have Friday and
+   the whole weekend)
+
+*** Rules:
+
+   - Must use at least two classes Must have at least 4 horses (All
+     horses can NOT be different classes!
+   - User input must affect at least one horse's speed Must out put
+     the horses' paths (even as simple as "---'horse 1'") as race
+     progresses
+
+*** Goals:
+
+    - classes
+    - methods
+    - passing arguments to methods
+    - thinking about the design and how classes interface with each
+      other
+    - DRYness
+    - making a complete & interesting & good program
