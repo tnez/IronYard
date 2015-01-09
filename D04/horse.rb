@@ -38,7 +38,7 @@ class Horse
 
   # output horse as string
   def print
-    "~/" + self.label_short.center(@@max_label_length,"=") + "\^"
+    "~/" + self.label_short.center(@@max_label_length,"=") + "\\^"
   end
 
   # output the horse length
