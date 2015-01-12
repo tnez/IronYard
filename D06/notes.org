@@ -1,0 +1,8 @@
+
+* Documentation
+
+  For both *html* and *css* documentation use [[https://developer.mozilla.org/en-US/][Mozilla Developer Network]].
+
+* HTML
+
+  - use *class* in leui of *id* in almost all cases

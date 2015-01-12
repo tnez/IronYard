@@ -92,3 +92,164 @@ This is my root directory for my time at IronYard.
       other
     - DRYness
     - making a complete & interesting & good program
+
+** TODO Day 6 - January 12th 2015
+
+   Using your HTML and CSS knowledge, create a website about anything
+   you would like.
+
+   Minimum of 3 pages (index, 2 others) Research, learn and document
+   how to use 5 CSS tags and/or special properties Be ready to talk
+   about them tomorrow during class!
+
+*** About Me
+    
+    Create an index page which displays header, navigation and some
+    *fake* about me text.
+
+    #+NAME: about
+    #+BEGIN_SRC html :tangle D06/about.html
+      <!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8"/>
+          <title>Harvey</title>
+          <link href="main.css" type="text/css" rel="stylesheet"/>
+        </head>
+        <body>
+          <!-- Header -->
+          <header>
+            <!-- Branding -->
+            <div class="branding">
+              <h1><a href="about.html"><img alt="Harvey" src="media/harvey.jpg"/></a></h1>
+            </div>
+            <!-- Main Navigation -->
+            <div class="navigation">
+              <ul>
+                <li><a class="active" href="about.html">About Me</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- Content -->
+          <div class="main-content">
+            <div class="report">
+              <dl>
+                <dt>Name</dt>
+                <dd>Harvey</dd>
+                <dt>Age</dt>
+                <dd>14 Months</dd>
+                <dt>Breed</dt>
+                <dd>European Great Dane</dd>
+                <dt>Hometown</dt>
+                <dd>Charleston, SC</dd>
+              </dl>
+            </div>
+          </div>
+        </body>
+      </html>
+    #+END_SRC
+
+*** News
+
+    Create a news page where Havery put's all his daily happenings.
+
+    #+NAME: about
+    #+BEGIN_SRC html :tangle D06/contact.html
+      <!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8"/>
+          <title>Harvey</title>
+          <link href="main.css" type="text/css" rel="stylesheet"/>
+        </head>
+        <body>
+          <!-- Header -->
+          <header>
+            <!-- Branding -->
+            <div class="branding">
+              <h1><a href="about.html"><img alt="Harvey" src="media/harvey.jpg"/></a></h1>
+            </div>
+            <!-- Main Navigation -->
+            <div class="navigation">
+              <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a class="active" href="news.html">News</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- Content -->
+          <div class="main-content">
+            <div class="contact-form">
+              <h1>Send me an email!</h1>
+              <form action="mailto:harvey.birddog@woofwoof.me" method="GET">
+                <fieldset>
+                  <label for="subject">Subject</label>
+                  <input name="subject" type="text" value=""/>
+                  <label for="body">Content</label>
+                  <textarea cols="30" id="" name="body" rows="10"></textarea>
+                  <input type="submit" value="Send"/>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </body>
+      </html>
+         
+    #+END_SRC
+*** Contact
+
+    Create a page where people can send me an email.
+
+    #+NAME: about
+    #+BEGIN_SRC html :tangle D06/news.html
+      <!doctype html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8"/>
+          <title>Harvey</title>
+          <link href="main.css" type="text/css" rel="stylesheet"/>
+        </head>
+        <body>
+          <!-- Header -->
+          <header>
+            <!-- Branding -->
+            <div class="branding">
+              <h1><a href="about.html"><img alt="Harvey" src="media/harvey.jpg"/></a></h1>
+            </div>
+            <!-- Main Navigation -->
+            <div class="navigation">
+              <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a class="active" href="contact.html">Contact Me</a></li>
+              </ul>
+            </div>
+          </header>
+          <!-- Content -->
+          <div class="main-content">
+            <div class="entry">
+              <h2>I ate a frog today</h2>
+              <p>
+                Today I ate a whole frog. Travis took me outside in the rain
+                and while he wasn't paying attention I snatched up a frog
+                from the ground and put the whole thing in my mouth! He
+                noticed the legs hanging out of my mouth but when he tried
+                to get it from me I just swallowed it whole.
+              </p>
+              <p><b>Yum yum yum!</b></p>
+            </div>
+            <div class="entry">
+              <h2>Today I played with a little dog</h2>
+              <p>
+                It was little and fluffy and his name was Toby. He bossed me
+                around even though I'm a big dog and he is so very little!
+              </p>
+            </div>
+          </div>
+        </body>
+      </html>
+    #+END_SRC
+
