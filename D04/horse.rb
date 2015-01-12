@@ -13,7 +13,7 @@ class Horse
   def initialize label
     self.label = label
     if self.label.length > @@max_label_length
-      self.label_short = self.label[0..@max_label_length-1]
+      self.label_short = self.label[0..@@max_label_length-1]
     else
       self.label_short = self.label
     end
