@@ -102,230 +102,66 @@ This is my root directory for my time at IronYard.
    how to use 5 CSS tags and/or special properties Be ready to talk
    about them tomorrow during class!
 
-*** Semantic Content (html)
-**** About Me
-     
-     Create an index page which displays header, navigation and some
-     information about *Harvey Birddog*.
+*** Define a font
 
-     #+NAME: about
-     #+BEGIN_SRC html :tangle D06/about.html :exports none
-       <!doctype html>
-       <html lang="en">
-         <head>
-           <meta charset="UTF-8"/>
-           <title>Harvey</title>
-           <link href="main.css" type="text/css" rel="stylesheet"/>
-         </head>
-         <body>
-           <div class="wrapper">
-             <!-- Header -->
-             <header>
-               <!-- Branding -->
-               <div class="branding">
-                 <h1><a href="about.html"><img alt="Harvey" src="media/harvey.jpg"/></a></h1>
-               </div>
-               <!-- Main Navigation -->
-               <div class="navigation">
-                 <ul>
-                   <li><a class="active" href="about.html">About Me</a></li>
-                   <li><a href="news.html">News</a></li>
-                   <li><a href="contact.html">Contact Me</a></li>
-                 </ul>
-               </div>
-             </header>
-             <!-- Content -->
-             <div class="main-content">
-               <div class="report">
-                 <dl>
-                   <dt>Name</dt>
-                   <dd>Harvey</dd>
-                   <dt>Age</dt>
-                   <dd>14 Months</dd>
-                   <dt>Breed</dt>
-                   <dd>European Great Dane</dd>
-                   <dt>Hometown</dt>
-                   <dd>Charleston, SC</dd>
-                 </dl>
-               </div>
-             </div>
-           </div>
-         </body>
-       </html>
-     #+END_SRC
-     
-**** News
+    Define a font-family such that we select the font in order of
+    preference, left-to-right, such that the first font will be used
+    if it is available, otherwise it will continue down the list
+    until an available font is found.
 
-     Create a news page where Havery put's all his daily happenings.
+    #+BEGIN_SRC css :export code
+      body {
+	  font-family: "Helvetica Neue", Helvetica, sans-serif;
+      }
+    #+END_SRC
 
-     #+NAME: about
-     #+BEGIN_SRC html :tangle D06/contact.html :exports none
-       <!doctype html>
-       <html lang="en">
-         <head>
-           <meta charset="UTF-8"/>
-           <title>Harvey</title>
-           <link href="main.css" type="text/css" rel="stylesheet"/>
-         </head>
-         <body>
-           <div class="wrapper">
-             <!-- Header -->
-             <header>
-               <!-- Branding -->
-               <div class="branding">
-                 <h1><a href="about.html"><img alt="Harvey" src="media/harvey.jpg"/></a></h1>
-               </div>
-               <!-- Main Navigation -->
-               <div class="navigation">
-                 <ul>
-                   <li><a href="about.html">About Me</a></li>
-                   <li><a class="active" href="news.html">News</a></li>
-                   <li><a href="contact.html">Contact Me</a></li>
-                 </ul>
-               </div>
-             </header>
-             <!-- Content -->
-             <div class="main-content">
-               <div class="entry">
-                 <h2>I ate a frog today</h2>
-                 <p>
-                   Today I ate a whole frog. Travis took me outside in the rain
-                   and while he wasn't paying attention I snatched up a frog
-                   from the ground and put the whole thing in my mouth! He
-                   noticed the legs hanging out of my mouth but when he tried
-                   to get it from me I just swallowed it whole.
-                 </p>
-                 <p><b>Yum yum yum!</b></p>
-               </div>
-               <div class="entry">
-                 <h2>Today I played with a little dog</h2>
-                 <p>
-                   It was little and fluffy and his name was Toby. He bossed me
-                   around even though I'm a big dog and he is so very little!
-                 </p>
-               </div>
-             </div>
-           </div>
-         </body>
-       </html>
-                 
-     #+END_SRC
+*** Center a wrapper
+    
+    #+BEGIN_SRC css :exports code
+      div.wrapper {
+	  max-width: 650px;
+	  margin: 0 auto;
+      }
 
-**** Contact
+    #+END_SRC
 
-     Create a page where people can send me an email.
+*** Create a circular border to an image using CSS
 
-     #+NAME: about
-     #+BEGIN_SRC html :tangle D06/news.html :exports none
-       <!doctype html>
-       <html lang="en">
-         <head>
-           <meta charset="UTF-8"/>
-           <title>Harvey</title>
-           <link href="main.css" type="text/css" rel="stylesheet"/>
-         </head>
-         <body>
-           <div class="wrapper">
-             <!-- Header -->
-             <header>
-               <!-- Branding -->
-               <div class="branding">
-                 <h1><a href="about.html"><img alt="Harvey" src="media/harvey.jpg"/></a></h1>
-               </div>
-               <!-- Main Navigation -->
-               <div class="navigation">
-                 <ul>
-                   <li><a href="about.html">About Me</a></li>
-                   <li><a href="news.html">News</a></li>
-                   <li><a class="active" href="contact.html">Contact Me</a></li>
-                 </ul>
-               </div>
-             </header>
-             <!-- Content -->
-             <div class="contact-form">
-               <h1>Send me an email!</h1>
-               <form action="mailto:harvey.birddog@woofwoof.me" method="GET">
-                 <fieldset>
-                   <label for="subject">Subject</label>
-                   <input name="subject" type="text" value=""/>
-                   <label for="body">Content</label>
-                   <textarea cols="30" id="" name="body" rows="10"></textarea>
-                   <input type="submit" value="Send"/>
-                 </fieldset>
-               </form>
-             </div>
-           </div>
-         </body>
-       </html>
-     #+END_SRC
+    #+BEGIN_SRC css :exports code
+      header img {
+	  width: 200px;
+	  height: 200px;
+	  border-radius: 100px;
+      }
 
-*** Style (CSS)
-**** Center the body
-     
-     Center and provide max-width for the body so that it sits in the
-     center of a large-screen browser.
+    #+END_SRC
 
-     #+BEGIN_SRC css :tangle D06/main.css
-       /* Provide a max-width and center the body in a normal size brower
-       window */
-       body {
-           max-width: 600px;
-           margin: 0 auto;
-           overflow: hidden;
-       }
-     #+END_SRC
+*** Change appearence of a link when the pointer hovers over
+    
+    #+BEGIN_SRC css :exports code
+      .navigation a:hover {
+	  color: #4183C4;
+	  font-weight: bold;
+      }
 
-**** Position and size the header
+    #+END_SRC
 
-     - move the header to the left on a normal size screen
-     - resize the branding image and display it as a circle
+*** Make a list display horizontally
+    
+    #+BEGIN_SRC css :exports code
+      .navigation li {
+	  display: inline-block;
+	  margin-right: 7px;
+      }
 
-     #+BEGIN_SRC css :tangle D06/main.css
-       /* header */
-       header {
-           /* size and position of the header */
-           width: 250px;
-           float: left;
-           /* center everything in the header */
-           text-align: center;
-       }
+    #+END_SRC  
 
-       header img {
-           width: 200px;
-           height: 200px;
-           border-radius: 100px;
-       }
-     #+END_SRC
+*** Increase the line height and letter spacing
 
-**** Position and size the navigation
-     
-     #+BEGIN_SRC css :tangle D06/main.css
-       div.main-navigation {
-           float: left;
-           clear: right;
-       }
-     #+END_SRC
+    #+BEGIN_SRC css :exports code
+      .main-content {
+	  line-height: 1.4em;
+	  letter-spacing: 0.05em;
+      }
 
-**** Position and size the main content
-     
-     - add a max width so that it can sit beside the header
-
-     #+BEGIN_SRC css :tangle D06/main.css
-       /* position main content div */
-       div#content {
-           max-width: 350px;
-       }
-     #+END_SRC  
-
-**** Center the content vertically
-
-     #+BEGIN_SRC css :tangle D06/main.css
-       /* vertically center the page wrapper */
-       div.wrapper {
-           /* grow div to include all floats */
-           overflow: hidden;
-           transform: translateY(50%);
-       }
-     #+END_SRC
-
-     
+    #+END_SRC
