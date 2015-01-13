@@ -1,0 +1,67 @@
+/* Give parents a hight */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Page Layout */
+body {
+    background-image: url("https://ununsplash.imgix.net/photo-1416934625760-d56f5e79f6fe?q=100&fm=jpg&s=032ca37757b3dc1851661856b956a24c&w=1440&h=900");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.page-wrapper {
+    position: relative;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-center,
+.bottom-right {
+    position: absolute;
+}
+
+.top-left {
+    top: 15px;
+    left: 15px;
+}
+
+.top-right {
+    top: 15px;
+    right: 15px;
+}
+
+.bottom-left {
+    bottom: 15px;
+    left: 15px;
+}
+
+.bottom-center {
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.bottom-right {
+    bottom: 15px;
+    right: 15px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Typography */
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    text-shadow: 0 rgba(0,0,0,0.5) 0 1px;
+    font-size: 16px;
+    color: #fff;
+}

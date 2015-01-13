@@ -1,0 +1,39 @@
+Guest lecture from *name* regarding front-end design.
+
+* Design tools
+
+** Codepen
+
+   [[codepen.io/pen]]
+   
+   Tool useful for laying out basic elements and inspecting
+   behavior. Useful for prototyping.
+
+** Placekitten (and other variations)
+   
+   Like *Lorem Ipsum* for images.
+
+** Unsplash
+
+   Free to use awesome images.
+
+   http://unsplash.com
+
+** CSSTRICKS / Chris Coyier
+
+   - http://css-tricks.com
+   - [[http://codepen.io/chriscoyie]]
+   - http://css-tricks.com/centering-css-complete-guide/
+
+** Golden Ratio Font Size Calculator
+
+   Calculate optimal font-size given parameters
+
+   - http://www.pearsonified.com/typography/
+
+** Can I use?
+
+   Gives you CSS browser compatibility for a given property.
+
+   - http://caniuse.com/
+   
