@@ -1,1 +1,4 @@
-The server is running.
+<% @posts.each do |post| %>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+<% end %>

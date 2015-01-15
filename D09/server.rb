@@ -9,6 +9,7 @@ DataMapper.finalize.auto_upgrade!
 
 # Show
 get '/' do
+  @posts = Post.all
   erb :index
 end
 
