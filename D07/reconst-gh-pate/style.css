@@ -1,0 +1,111 @@
+/* create well-formed parent elements */
+html,
+body {
+    height: 100%;
+    body: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+
+/* border divs for the sake of development */
+div {
+    border: 1px #999 dotted;
+    box-sizing: border-box;
+}
+
+/* global layout */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.inline {
+    display: inline-block;
+}
+div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* global style */
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+/* header nav bar */
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.octocat-logo {
+    margin-right: 10px;
+}
+.header input {
+    width: 100%;
+    margin-right: 10px;
+    width: 350px;
+    padding: 4px 20px 4px 8px;
+    font-size: 12px;
+}
+.header li {
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+    padding: 4px 8px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.header a:hover {
+    color: #4183C4;
+}
+
+/* content wrapper */
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-grid {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* column */
+.column {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* left-column */
+.left-column {
+    width: 25%;
+    float: left;
+    height: 1000px;
+}
+
+/* right-column */
+.right-column {
+    width: 75%;
+    float: left;
+    height: 1000px;
+}
