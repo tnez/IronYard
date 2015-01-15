@@ -47,3 +47,9 @@ put '/edit_post/:id' do
   @post.save
   redirect to '/'
 end
+
+delete '/delete_post/:id' do
+  @post = Post.get params[:id]
+  @post.destroy
+  redirect to '/'
+end
