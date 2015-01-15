@@ -10,18 +10,18 @@ DataMapper.finalize.auto_upgrade!
 # Show
 get '/' do
   @posts = Post.all
-  erb :index
+  erb :index, layout: :default
 end
 
 # View single post
 get '/post/:id' do
   @post = Post.get params[:id]
-  erb :indiv_post
+  erb :indiv_post, layout: :default
 end
 
 # New
 get '/create_post' do
-  erb :create_post_form
+  erb :create_post_form, layout: :default
 end
 
 # Create
@@ -37,7 +37,7 @@ end
 # Edit
 get '/edit_post/:id' do
   @post = Post.get params[:id]
-  erb :edit_post_form
+  erb :edit_post_form, layout: :default
 end
 
 put '/edit_post/:id' do
