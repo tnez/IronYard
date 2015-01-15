@@ -22,7 +22,7 @@
   greater than one and unroll the recursion, concatentating the arrays
   in appropriate order as we go.
 
-  #+BEGIN_SRC ruby 
+  #+BEGIN_SRC ruby :exports both :tangle 01-Sort.rb
     # our test data
     a = [3,4,6,1,3,6,7,8,9,2,4,5,6,7,10,146,3,4,7,8,74]
 
