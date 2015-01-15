@@ -33,3 +33,17 @@ post '/create_post' do
   @post.save
   redirect to '/'
 end
+
+# Edit
+get '/edit_post/:id' do
+  @post = Post.get params[:id]
+  erb :edit_post_form
+end
+
+put '/edit_post/:id' do
+  @post = Post.get params[:id]
+  @post.title = params[:title]
+  @post.body = params[:body]
+  @post.save
+  redirect to '/'
+end
