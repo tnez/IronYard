@@ -13,6 +13,12 @@ get '/' do
   erb :index
 end
 
+# View single post
+get '/post/:id' do
+  @post = Post.get params[:id]
+  erb :indiv_post
+end
+
 # New
 get '/create_post' do
   erb :create_post_form
