@@ -168,8 +168,6 @@ This is my root directory for my time at IronYard.
 
 ** Day 9 - January 15th 2014
 
-   [[./D09/]]
-
    Create a blog website no css required need each CRUD after edit,
    repopulate all the fields and then redirect front page- list of
    posts text area - research this and use it for content each post
@@ -180,6 +178,9 @@ This is my root directory for my time at IronYard.
 
    Research twitter bootstrap if you would like!
    http://getbootstrap.com/
+
+   [[./D09/screenshot.png]]
+   [[./D09]]
 
 ** Programmer Problems
    1) sort: [[./ProgProblems/01-Sort.org]]

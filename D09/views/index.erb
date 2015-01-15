@@ -1,5 +1,8 @@
+<form class="" action="/create_post" method="get">
+    <button class="btn btn-primary new-post-btn" name="" type="submit">New Post</button>
+</form>
 <% @posts.each do |post| %>
-    <h1><a href="/post/<%= post.id %>"><%= post.title %></a></h1>
+    <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
     <p><%= post.body %></p>
 <% end %>
-<a href="/create_post">New Post</a>
+
