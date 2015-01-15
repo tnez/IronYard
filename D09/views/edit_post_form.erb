@@ -1,12 +1,14 @@
-<h1>Edit Post</h1>
+<h2>Edit Post</h2>
 <a href="/">back</a>
 <form action="/edit_post/<%= @post.id %>" method="post">
     <input type="hidden" name="_method" value="put">
-    <label for="title">Title</label>
-    <input name="title" type="text" value="<%= @post.title %>" />
-    <br/>
-    <label for="body">Body</label>
-    <textarea name="body"><%= @post.body %></textarea>
-    <br/>
-    <input name="" type="submit" value="Save"/>
+    <div class="form-group">
+	<label for="title">Title</label>
+	<input class="form-control" name="title" type="text" value="<%= @post.title %>" />
+    </div>
+    <div class="form-group">
+	<label for="body">Body</label>
+	<textarea class="form-control" name="body"><%= @post.body %></textarea>
+    </div>
+    <button class="btn btn-default" name="" type="submit">Update Post</button>
 </form>
