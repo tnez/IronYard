@@ -185,3 +185,4 @@ This is my root directory for my time at IronYard.
 ** Programmer Problems
    1) sort: [[./ProgProblems/01-Sort.org]]
    2) FizzBuzz [[./ProgProblems/02-FizzBuzz.org]]
+   3) LadderClimber [[./ProgProblems/03-LadderClimber.org]]
