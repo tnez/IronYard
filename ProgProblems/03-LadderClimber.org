@@ -1,0 +1,45 @@
+* Problem
+
+  Write a function that accepts a parameter for the amount of steps in
+  a ladder. That function will tell me how many ways you can climb a
+  ladder moving 1 step or 2 steps at a time.
+
+* Solution
+
+  We can approach this problem one rung at a time. There is only one
+  way to get to the first rung - take one step. To get to the second
+  rung, we can either move one step from the first rung, or two steps
+  from the bottom.
+
+  In other words:
+
+  Start from (n-1) and take one step, or start from (n-2) and take 2
+  steps.
+
+  #+BEGIN_SRC ruby :exports both :tangle 03-LadderClimber.rb
+
+    def possible_steps_for_rungs num_rungs
+      # if number of rungs is less than or equal to 2, then the number of
+      # possibilities is equal to the number of rungs
+      if num_rungs <= 2
+        return num_rungs
+      end
+      # otherwise, add the two ways of getting there (1 step from n-1, or
+      # 2 steps from n-2)
+      return possible_steps_for_rungs(num_rungs - 1) +
+             possible_steps_for_rungs(num_rungs - 2)
+    end
+
+    results = []
+
+    (1..15).each do |num_rungs| 
+      results.push(possible_steps_for_rungs num_rungs)
+    end
+
+    results
+
+  #+END_SRC
+
+  #+RESULTS:
+  | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 | 89 | 144 | 233 | 377 | 610 | 987 |
+
