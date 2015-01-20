@@ -3,3 +3,4 @@
 <p class="snippet-code"><%= @snippet.code %></p>
 <%= link_to "Back", snippets_path %>
 <%= link_to "Edit", edit_snippet_path(@snippet) %>
+<%= link_to "Delete", @snippet, method: :delete %>
