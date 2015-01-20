@@ -3,7 +3,7 @@
   <% @snippets.each do |snippet| %>
     <li class="snippet-item">
       <h3 class="snippet-title"><%= snippet.title %></h3>
-      <p class="snippet-desc"><%= snippet.desc[0..@char_limit]%>></p>
+      <p class="snippet-desc"><%= snippet.desc[0..@char_limit]%></p>
       <% link_to "View Snippet", snippet_path(snippet) %>
     </li>
   <% end %>
