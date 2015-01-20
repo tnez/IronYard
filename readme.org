@@ -182,6 +182,22 @@ This is my root directory for my time at IronYard.
    [[./D09/screenshot.png]]
    [[./D09]]
 
+** Day 11 - January 20th 2015
+
+*** Specifications
+
+   - Create a rails application that has basic CRUD.
+   - Any type of application is fine.
+   - 1 model
+   - 1 controller required
+   - Strongly suggest doing more than 1!
+
+*** Description
+
+    I decdied to create a rails application to handle code snippets
+    The apps hold snippets of code, associated with given user
+    accounts.
+
 ** Programmer Problems
    1) sort: [[./ProgProblems/01-Sort.org]]
    2) FizzBuzz [[./ProgProblems/02-FizzBuzz.org]]
