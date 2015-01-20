@@ -5,6 +5,10 @@ class SnippetsController < ApplicationController
     @char_limit = 75
   end
 
+  def show
+    @snippet = Snippet.find params[:id]
+  end
+
   def new
     @snippet = Snippet.new
   end
