@@ -18,6 +18,16 @@ class SnippetsController < ApplicationController
     redirect_to snippets_path
   end
 
+  def edit
+    @snippet = Snippet.find params[:id]
+  end
+
+  def update
+    @snippet = Snippet.find params[:id]
+    @snippet.update snippet_params
+    redirect_to snippets_path
+  end
+
   def snippet_params
     params.require(:snippet).permit(:title,:desc,:code)
   end

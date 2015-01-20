@@ -1,0 +1,19 @@
+<h2>Edit the snippet</h2>
+<%= form_for :snippet, url: snippet_path(@snippet), method: :patch do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :desc %>
+    <%= f.text_area :desc %>
+  </div>
+  <div class="form-group">
+    <%= f.label :code %>
+    <%= f.text_area :code %>
+  </div>
+  <div class="form-group">
+    <%= link_to "Cancel", snippets_path %>
+    <%= f.submit %>
+  </div>
+<% end %>
