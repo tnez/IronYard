@@ -198,6 +198,23 @@ This is my root directory for my time at IronYard.
     The apps hold snippets of code, associated with given user
     accounts.
 
+** Day 12 - January 21st 2015 - (Hospital v1)
+
+   We are creating a tracking system for a patient as he/she goes
+   through a hospital. Today you will create the basic CRUD.
+
+   - First name (Text field)
+   - Last name (Text field)
+   - Date of Birth (date selector field - Only dates 10 years or
+     earlier)
+   - Description (text field - Will be a description of why the
+     patient is at the hospital)
+   - Gender (Radio button)
+   - Blood Type (Select box)
+   - All of these fields are required!
+
+   See results here: [[https://github.com/tnez/hospital/tree/v1.0]]
+
 ** Programmer Problems
    1) sort: [[./ProgProblems/01-Sort.org]]
    2) FizzBuzz [[./ProgProblems/02-FizzBuzz.org]]
