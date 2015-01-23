@@ -1,0 +1,55 @@
+* Problem
+
+Given a start and end date return a distinct set of Dates in
+chronological order(inclusive of start and end dates) that, when
+formated as MMddyyyy, are palindromes. A palindrome is a string that
+reads the same forwards and backwards, for example: Nov 2, 2011
+(11022011).
+
+Use a class structure to solve this
+
+* Solution
+
+Before I get coding, I want to get an idea of the solution
+space. Through a range of dates, are most dates palindromes? Are there
+large gaps and predictable patterns. I don't know off the top of my
+head.
+
+First let's get a idea of just how many palindrome dates exist w/ a
+brute-force method of exploration.
+
+#+BEGIN_SRC ruby :results output :cache yes
+  require 'date'
+
+  start_date = Date.new(0,1,1)
+  end_date = Date.new(5000,12,31)
+
+  num_days_in_range = end_date - start_date
+
+  # starting at the start date, try to generate a date with the
+  # palindrome for each date in the range, if this creates an exception
+  # then move to the next date
+  found_p_dates = 0
+  this_date = start_date
+  while this_date <= end_date
+    # get the palindrome date parameters
+    pal = this_date.strftime("%m%d%Y").reverse
+    begin
+      p_date = Date.new(pal[4..8].to_i, pal[0..2].to_i, pal[2..4].to_i)
+      found_p_dates += 1
+    rescue
+      # do nothing
+    end
+    this_date += 1
+  end
+
+  pal_pct = (found_p_dates.to_f / num_days_in_range) * 100.0
+
+  puts "Percentage of dates that have palindromes: #{pal_pct.round(3)}%"
+#+END_SRC
+
+#+RESULTS[6aa2306384de427abdd1dcc5b59e9bb2f61056ba]:
+: Percentage of dates that have palindromes: 0.062%
+
+So it seems that there are *many, many* more dates that do not have
+palindromes than those that do.
