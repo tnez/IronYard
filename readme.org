@@ -215,6 +215,20 @@ This is my root directory for my time at IronYard.
 
    See results here: [[https://github.com/tnez/hospital/tree/v1.0]]
 
+** Day 13 - January 22nd 2015 - (Hospital v2)
+
+Change your relationships up a bit. You need to add
+Hospitals/Facilities and Medications. Your patients should live under
+your facilities and your medications should live under your
+patients. You should be able to create multiple facilities and have
+many patients there. Your medications should also be related to your
+patients. You should be able to have many medications.
+
+*** Research
+
+Join tables
+Has Many Through relationships
+
 ** Programmer Problems
    1) sort: [[./ProgProblems/01-Sort.org]]
    2) FizzBuzz [[./ProgProblems/02-FizzBuzz.org]]
