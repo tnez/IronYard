@@ -224,6 +224,8 @@ patients. You should be able to create multiple facilities and have
 many patients there. Your medications should also be related to your
 patients. You should be able to have many medications.
 
+See results here: https://github.com/tnez/hospital/tree/v2.0
+
 *** Research
 
 Join tables
